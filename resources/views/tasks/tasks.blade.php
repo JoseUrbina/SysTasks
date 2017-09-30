@@ -6,7 +6,10 @@
         	<div class="panel panel-primary">
 			  <div class="panel-heading">Tareas</div>
 			  <div class="panel-body">
-			    <table class="table table-hover">
+				<a href="{{route('Tasks.create')}}" class="btn btn-primary">Nuevo</a>
+			  	<hr>
+			  	<div class="table table-responsive">
+			  		<table class="table table-hover">
 			  		<thead>
 			  			<th>Completed</th>
 			  			<th>Name</th>
@@ -26,7 +29,8 @@
 							  </tr>
 			  			@endforeach
 			  		</tbody>
-				</table>
+					</table>
+			  	</div>			    
 			  </div>
 			</div>			
 		</div>

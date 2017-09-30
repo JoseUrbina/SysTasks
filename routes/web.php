@@ -53,6 +53,9 @@ Route::View('/newRoute','vEjemplo',["Name" => Config::get('app.name')]);
 Route::namespace('Backend')->group(function () {
 	// Creando ruta basica para el controllador tasks : metodos creados por uno mismo
 	Route::get('Tasks','TasksController@getIndex');
+	Route::get('Tasks/create','TasksController@getCreate')->name('Tasks.create');
+	Route::post('Tasks/store','TasksController@postStore')->name('Tasks.store');
+
     Route::resource('Users','UsersController');
 });
 
